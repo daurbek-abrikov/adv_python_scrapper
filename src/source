@@ -1,0 +1,21 @@
+from bs4 import BeautifulSoup
+import requests
+
+
+class Web_Scrapper():
+    URL = 'https://coinmarketcap.com/currencies/'
+    def set_coin(self):
+        print("Please type the name of cryptocurrency, of which you need information:")
+        self.crypto = input()
+
+    def get_p(self):
+        page = requests.get(self.URL + self.crypto)
+        soup = BeautifulSoup(page.text, 'html.parser')
+        paragraphs = soup.find_all('p') 
+        return paragraphs
+
+    def print_p(self):
+        for item in self.get_p():
+            print(item.get_text())  
+            print()
+        print("-"*64)      
