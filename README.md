@@ -17,8 +17,8 @@ pip install beautifulsoup4
 
 
 
-```python 
-# User input 3, and result is below:
->>> n = 3
-{['bitcoin', 'ethereum', 'tether']}
+```python test/test.py 
+# User input 'bitcoin', and result is below:
+>>> 'bitcoin'
+{"List of paragraphs from coinmarketcap.com"}
 
