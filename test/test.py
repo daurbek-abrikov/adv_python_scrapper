@@ -1,6 +1,6 @@
 import sys
 sys.path.append("src")             
-import Web_Scrapper    
+import source as src    
 
 scrapper = Web_Scrapper()   #initiating an object of our class
 
